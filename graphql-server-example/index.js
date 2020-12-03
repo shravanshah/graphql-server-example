@@ -176,11 +176,13 @@ const listings = [
   }
 
 // Resolvers define the technique for fetching the types defined in the
-// schema. This resolver retrieves books from the "books" array above.
+// schema. This resolver retrieves listings from the "listings" array above.
 const resolvers = {
     Query: {
       getListings: () => listings,
       getLocations: () => location_wrapper,
+      // TODO: write filter function for Filtering; 
+      // For now returning hardcoded locations
       getFilteredLocations: () => locations,
     },
   };
